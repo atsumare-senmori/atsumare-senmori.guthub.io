@@ -1,0 +1,253 @@
+:root{
+  --my-color1: #98ddca;
+  --my-color2: #d5ecc2;
+  --my-color3: #ffd3b4;
+  --my-color4: #ffaaa7;
+
+
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+body header h1{
+  font-size: 22px;
+  line-height: 64px;
+  margin: 0;
+  padding: 0 16px;
+}
+
+body a{
+  text-decoration: none;
+}
+
+body header .top {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--my-color1)
+}
+
+body header li{
+  list-style-type: none;
+}
+
+/* HumbergerMenu */
+.pc-menu{
+  display: none;
+}
+
+.mobile-menu{
+  margin: 0 16px;
+}
+
+.mobile-menu #open{
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.mobile-menu #open.hide{
+  display: none;
+}
+
+.showing-menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.showing-menu #close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.showing-menu.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.showing-menu ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.showing-menu li{
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: transform .3s, opacity .3s;
+}
+.showing-menu li{
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: transform .3s, opacity .3s;
+}
+
+.showing-menu.show li{
+  opacity: 1;
+  transform: none;
+}
+
+.showing-menu.show li:nth-child(1){
+  transition-delay: .1s;
+}
+.showing-menu.show li:nth-child(2){
+  transition-delay: .2s;
+}
+.showing-menu.show li:nth-child(3){
+  transition-delay: .3s;
+}
+
+/* MENU */
+
+body header menu{
+  padding: 0;
+}
+
+body header menu ul{
+  padding: 0;
+}
+
+body header menu ul a{
+  display: block;
+  text-align: center;
+  width: 100%;
+  line-height: 64px;
+  background-color: var(--my-color2);
+  border-bottom: 2px solid #fff;
+}
+
+/* コンテンツ共通 */
+.content{
+  color: #333;
+  background-color: var(--my-color3);
+}
+
+.content h1{
+  font-size: 26px;
+  text-align: center;
+}
+
+/* 繊細さんの森 */
+
+.sns{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+
+.sns li{
+  list-style: none;
+}
+
+.sns img{
+  width: 40px;
+  height: 40px;
+  border: 0.4px solid #ccc;
+  border-radius: 8px;
+  margin: 10px 20px;
+}
+/* 繊細さんの仕事場 */
+/* 繊細さんの掲示板 */
+/* 繊細さんのコミュニティ */
+/* 繊細さんのコラム */
+
+.column article{
+  margin: 0 20px;
+}
+.column .flexbox{
+  display: flex;
+}
+
+.title{
+  border-radius: 12px;
+  background: yellow;
+  text-align: center;
+  line-height: 25px;
+}
+
+.column time{
+  margin-left: 10px;
+  vertical-align: bottom;
+}
+
+.column .title p{
+  margin: 0 10px;
+}
+
+.column article a p{
+  margin-left: 20px;
+}
+
+/* footer */
+footer p{
+  text-align: center;
+}
+
+
+@media(min-width:720px){
+
+body header nav li{
+  margin-left: 5px;
+}
+
+.pc-menu{
+  display: block;
+  margin-left: auto;
+}
+
+.pc-menu ul{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pc-menu a{
+  display: block;
+  width: 100px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.pc-menu a:hover{
+  background: #f2f2f2;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+.showing-menu #close{
+  display: none;
+}
+
+/* MENU */
+menu ul{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+ 
+menu ul li{
+  margin: 5px;
+}
+
+}
