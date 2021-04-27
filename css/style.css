@@ -26,14 +26,20 @@ body a{
 body header .top {
   display: flex;
   justify-content: space-between;
-  background-color: var(--my-color1)
+  background-color: var(--my-color1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 body header li{
   list-style-type: none;
 }
 
+/* +++++++++++++ */
 /* HumbergerMenu */
+/* +++++++++++++ */
 .pc-menu{
   display: none;
 }
@@ -113,37 +119,84 @@ body header li{
   transition-delay: .3s;
 }
 
+/* +++++ */
+/* SPACE */
+/* +++++ */
+
+.space{
+  width: 100%;
+  height: 64px;
+}
+
+/* ++++ */
 /* MENU */
+/* ++++ */
+menu{
+  margin: 0;
+}
 
 body header menu{
   padding: 0;
+  /* margin: 5px; */
 }
 
 body header menu ul{
+  display: flex;
+  justify-content: space-between;
   padding: 0;
+  margin: 0;
 }
 
-body header menu ul a{
-  display: block;
+body header menu ul li{
   text-align: center;
+  font-size: 11px;
+  line-height: 70px;
   width: 100%;
-  line-height: 64px;
   background-color: var(--my-color2);
-  border-bottom: 2px solid #fff;
 }
 
+
+/* ++++++++++++++ */
 /* コンテンツ共通 */
+/* ++++++++++++++ */
+main{
+  padding: 10px 0;
+  background: var(--my-color3);
+}
+
 .content{
   color: #333;
-  background-color: var(--my-color3);
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 10px ;
+}
+
+.content section{
+  padding: 20px;
 }
 
 .content h1{
   font-size: 26px;
   text-align: center;
+  margin: 0;
+  background: var(--my-color4);
+  border-radius: 5px ;
+
 }
 
+.content h1::before{
+  content: ' ';
+  width: 5px;
+  line-height: 26px;
+  background: var(--my-color4);
+}
+
+/* ++++++++++++ */
 /* 繊細さんの森 */
+/* ++++++++++++ */
+.forest h2{
+  font-size: 18px;
+}
 
 .sns{
   text-align: center;
@@ -151,7 +204,6 @@ body header menu ul a{
   justify-content: center;
   padding: 0;
 }
-
 
 .sns li{
   list-style: none;
@@ -164,21 +216,25 @@ body header menu ul a{
   border-radius: 8px;
   margin: 10px 20px;
 }
-/* 繊細さんの仕事場 */
-/* 繊細さんの掲示板 */
-/* 繊細さんのコミュニティ */
+
+.sns p{
+  margin: 0;
+}
+/* ++++++++++++++++ */
 /* 繊細さんのコラム */
+/* ++++++++++++++++ */
 
 .column article{
-  margin: 0 20px;
+  margin: 20px;
 }
+
 .column .flexbox{
   display: flex;
 }
 
 .title{
   border-radius: 12px;
-  background: yellow;
+  background: var(--my-color2);
   text-align: center;
   line-height: 25px;
 }
@@ -194,6 +250,28 @@ body header menu ul a{
 
 .column article a p{
   margin-left: 20px;
+  color: #333;
+  text-decoration: underline;
+}
+
+/* ++++++++++++++++ */
+/* 繊細さんの仕事場 */
+/* ++++++++++++++++ */
+.office h2{
+  text-align: center;
+}
+
+/* ++++++++++++++++ */
+/* 繊細さんの掲示板 */
+/* ++++++++++++++++ */
+.board h2{
+  text-align: center;
+}
+/* ++++++++++++++++++++++ */
+/* 繊細さんのコミュニティ */
+/* ++++++++++++++++++++++ */
+.community h2{
+  text-align: center;
 }
 
 /* footer */
@@ -202,7 +280,24 @@ footer p{
 }
 
 
-@media(min-width:720px){
+@media(min-width:490px){
+/* +++ */
+/* TOP */
+/* +++ */
+body header .top{
+  position: static;
+}
+
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+header .top h1{
+  line-height: 80px;
+}
 
 body header nav li{
   margin-left: 5px;
@@ -223,7 +318,7 @@ body header nav li{
 .pc-menu a{
   display: block;
   width: 100px;
-  line-height: 64px;
+  line-height: 80px;
   text-align: center;
 }
 
@@ -239,15 +334,61 @@ body header nav li{
   display: none;
 }
 
+/* +++++ */
+/* SPACE */
+/* +++++ */
+
+.space{
+  width: 100%;
+  height: 0px;
+}
+.space2{
+  height: 120px;
+}
+/* ++++ */
 /* MENU */
-menu ul{
-  display: flex;
-  justify-content: center;
+/* ++++ */
+
+menu{
   margin: 0;
 }
- 
-menu ul li{
-  margin: 5px;
+
+menu ul{
+  display: flex;
+  margin: 0;
+}
+
+body header menu ul li {
+
+  width: 100%;
+  line-height: 40px;
+  height: auto;
+  border-radius: none;
+}
+
+body header menu ul a {
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  height: auto;
+
+}
+
+/* ++++++++++++ */ 
+/* 繊細さんの森 */
+/* ++++++++++++ */
+.sns{
+  margin: 16px;
+  /* justify-content: space-between; */
+}
+
+.sns li{
+  margin: 20px;
+}
+
+.sns img{
+  width: 60px;
+  height: 60px;
 }
 
 }
