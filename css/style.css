@@ -133,10 +133,28 @@ body header li{
   color: #fff;
 }
 
+/* ++++++++++++++++++++ */
+/* お問い合わせフォーム */
+/* ++++++++++++++++++++ */
+.forms{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 295px;
+  height: 1200px;
+  margin: auto;
+}
+/* +++++ */
+/* Q & A */
+/* +++++ */
+
+/* ++++++++ */
+/* About Us */
+/* ++++++++ */
+
 /* +++++ */
 /* SPACE */
 /* +++++ */
-
 .space2{
   height: 136px;
 }
@@ -144,7 +162,6 @@ body header li{
 /* ++++ */
 /* MENU */
 /* ++++ */
-
 menu{
   margin: 0;
 }
@@ -167,7 +184,7 @@ body header menu ul li{
   line-height: 70px;
   width: 100%;
   background-color: var(--my-color1);
-  border: 0.4px solid #fff;
+  border: 1px solid var(--my-color3);
 }
 
 body header menu ul li a{
@@ -204,7 +221,6 @@ main{
   background: var(--my-color2);
   border-radius: 5px ;
   color: #fff;
-
 }
 
 .content h1::before{
@@ -212,6 +228,24 @@ main{
   width: 5px;
   line-height: 26px;
   background: var(--my-color4);
+}
+
+.content h2{
+  text-align: center;
+}
+
+/* ++++++++++ */
+/* 共通ボタン */
+/* ++++++++++ */
+.btn a{
+  color: #fff;
+  display: block;
+  text-align: center;
+  width: 240px;
+  line-height: 34px;
+  margin: auto;
+  background: var(--my-color3);
+  border-radius: 17px;
 }
 
 /* ++++++++++++ */
@@ -242,10 +276,14 @@ main{
 
 .sns p{
   margin: 0;
+  color: var(--my-color1);
 }
 /* ++++++++++++++++ */
 /* 繊細さんのコラム */
 /* ++++++++++++++++ */
+.column {
+  height: 400px;
+}
 
 .column article{
   margin: 20px;
@@ -278,31 +316,114 @@ main{
 }
 
 /* ++++++++++++++++ */
+/* 繊細さんのブログ */
+/* ++++++++++++++++ */
+.blog h2{
+  text-align: center;
+}
+
+.blog article{
+  border-bottom: 1px dotted #333;
+  margin: 0;
+}
+
+.blog .article-box a{
+  display: flex;
+  width: 100%;
+}
+
+.blog .article-box img{
+  width: 120px;
+  height: 80px;
+  padding: 10px;
+}
+
+.blog .letter{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog .article-box p{
+  margin: 0;
+  padding: 10px;
+}
+
+.blog article time{
+  margin-left: auto;
+}
+
+/* ++++++++++++++++ */
 /* 繊細さんの仕事場 */
 /* ++++++++++++++++ */
+.office{
+  height: 400px;
+}
+
 .office h2{
   text-align: center;
 }
 
-/* ++++++++++++++++ */
-/* 繊細さんの掲示板 */
-/* ++++++++++++++++ */
-.board h2{
-  text-align: center;
-}
 
 /* ++++++++++++++++++++++ */
 /* 繊細さんのコミュニティ */
 /* ++++++++++++++++++++++ */
+.community{
+  height: 400px;
+}
+
 .community h2{
   text-align: center;
 }
 
+/* ++++++ */
 /* footer */
-footer p{
-  text-align: center;
-  color: #fff;
+/* ++++++ */
+footer{
+  background: #fff;
 }
+
+footer span{
+  display: flex;
+  justify-content: center;
+  line-height: 42px;
+}
+
+footer #footer-sns{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+footer #footer-sns a{
+  display: flex;
+}
+
+footer #footer-sns a p{
+  line-height: 52px;
+}
+
+footer #footer-sns img{
+  width: 30px;
+  height: 30px;
+  border: 0.4px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+/* +++++++++ */
+/* copyright */
+/* +++++++++ */
+
+footer .copyright p{
+  text-align: center;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
 
 /* ++++++++++++++++++++++++ スイッチ ++++++++++++++++++++++++ */
 @media(min-width:490px){
@@ -361,15 +482,18 @@ body header nav li{
   display: none;
 }
 
+/* ++++++++++++++++++++ */
+/* お問い合わせフォーム */
+/* ++++++++++++++++++++ */
+.forms{
+  max-width: 570px;
+  max-height: 930px;
+  margin: auto;
+}
+
 /* +++++ */
 /* SPACE */
 /* +++++ */
-
-.space{
-  width: 100%;
-  height: 0px;
-} 
-
 .space2{
   height: 120px;
 }
@@ -379,7 +503,6 @@ body header nav li{
 /* ++++ */
 menu{
   margin: 0;
-
 }
 
 menu ul{
@@ -401,6 +524,14 @@ body header menu ul a {
   font-size: 16px;
 }
 
+/* ++++++++++++++ */
+/* コンテンツ共通 */
+/* ++++++++++++++ */
+main{
+  max-width: 650px;
+  margin: auto
+};
+
 /* ++++++++++++ */ 
 /* 繊細さんの森 */
 /* ++++++++++++ */
@@ -418,6 +549,22 @@ body header menu ul a {
   height: 60px;
 }
 
+/* ++++++++++++++++ */
+/* 繊細さんのブログ */
+/* ++++++++++++++++ */
+.blog .article-box img{
+  width: 160px;
+  height: 80px;
+  padding: 10px;
+}
+
+/* ++++++ */
+/* footer */
+/* ++++++ */
+footer #footer-sns{
+  height: 82px;
+}
+
 }
 
 /* ++++++++++++++++++++++++ スイッチ ++++++++++++++++++++++++ */
@@ -430,6 +577,20 @@ body header menu ul li{
   height: 50px;
 }
 
+body header menu ul a {
+  font-size: 23px;
+  line-height: 52px;
+}
+
+/* ++++++++++++++++++++ */
+/* お問い合わせフォーム */
+/* ++++++++++++++++++++ */
+.forms{
+  max-width: 720px;
+  max-height: 900px;
+  margin: auto;
+}
+
 /* +++++ */
 /* SPACE */
 /* +++++ */
@@ -438,14 +599,30 @@ body header menu ul li{
   height: 160px;
 } 
 
-body header menu ul a {
-  font-size: 23px;
-  line-height: 52px;
-}
-
+/* ++++++++++++++ */
+/* コンテンツ共通 */
+/* ++++++++++++++ */
 main{
-  max-width: 650px;
+  max-width: 800px;
   margin: auto
 };
+
+/* ++++++ */
+/* footer */
+/* ++++++ */
+#footer-sns  {
+  justify-content: space-between;
+}
+
+footer #footer-sns img{
+  width: 40px;
+  height: 40px;
+  border: 0.4px solid #ccc;
+  border-radius: 8px;
+  margin: 20px;
+}
+footer #footer-sns a p{
+  line-height: 80px;
+}
 
 }
