@@ -148,10 +148,37 @@ body header li{
 /* Q & A */
 /* +++++ */
 
+.fqa dl{
+  padding: 20px;
+}
+
+.fqa dd{
+  margin: 20px;
+}
+
 /* ++++++++ */
 /* About Us */
 /* ++++++++ */
 
+.message{
+  background-color: moccasin;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.message h1{
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+  font-size: 26px;
+}
+
+.message p{
+  margin: 0;
+  padding:0 15px;
+  font-size: 18px;
+  line-height: 2.5;
+}
 /* +++++ */
 /* SPACE */
 /* +++++ */
@@ -214,13 +241,15 @@ main{
   padding: 20px;
 }
 
-.content h1{
+.content h1#title {
   font-size: 26px;
   text-align: center;
   margin: 0;
   background: var(--my-color2);
   border-radius: 5px ;
   color: #fff;
+  line-height: 40px;
+  margin-bottom: 20px;
 }
 
 .content h1::before{
@@ -376,6 +405,8 @@ main{
 .community h2{
   text-align: center;
 }
+
+
 
 /* ++++++ */
 /* footer */
